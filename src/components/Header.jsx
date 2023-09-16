@@ -9,7 +9,7 @@ const Header = () => {
   }
   return (
     <div className="bg-white border-b shadow-sm sticky top-0 z-50">
-      <header className="flex justify-between items-center px-3 max-w-6xl mx-auto">
+      <header className="flex justify-between items-center px-3 max-w-6xl mx-auto whitespace-nowrap">
         <div>
           <img
             onClick={() => navigate("/")}
@@ -23,21 +23,21 @@ const Header = () => {
             <li
               onClick={() => navigate("/")}
               className={`cursor-pointer py-3 text-gray-400 text-sm font-semibold border-b-[3px] border-b-transparent
-              ${pathMatchRoute("/") && "text-black border-b-red-500"}`}
+              ${pathMatchRoute("/") && " !text-black !border-b-red-500"}`}
             >
               Home
             </li>
             <li
               onClick={() => navigate("/offers")}
               className={`cursor-pointer py-3 text-gray-400 text-sm font-semibold border-b-[3px] border-b-transparent
-              ${pathMatchRoute("/offers") && "text-black border-b-red-500"}`}
+              ${pathMatchRoute("/offers") && "!text-black !border-b-red-500"}`}
             >
               Offers
             </li>
             <li
               onClick={() => navigate("/sign-in")}
               className={`cursor-pointer py-3 text-gray-400 text-sm font-semibold border-b-[3px] border-b-transparent
-              ${pathMatchRoute("/sign-in") && "text-black border-b-red-500"}`}
+              ${pathMatchRoute("/sign-in") && "!text-black !border-b-red-500"}`}
             >
               Sign in
             </li>
